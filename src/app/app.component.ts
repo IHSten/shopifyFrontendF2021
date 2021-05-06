@@ -15,10 +15,10 @@ export class AppComponent {
   constructor(private nominationervice: NominationService) {
     this.receiver = this.nominationervice.displayBanner().subscribe(() => {
       this.displayBanner = true;
-    })
+    });
   }
 
-  onCloseBanner() {
+  onCloseBanner(): void {
     this.displayBanner = false;
   }
 }

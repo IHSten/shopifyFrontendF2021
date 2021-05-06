@@ -16,25 +16,25 @@ export class NomineesComponent implements OnInit {
   constructor(private nominationService: NominationService) {
     this.receiver = this.nominationService.getNominees().subscribe(nominees => {
       this.nominees = nominees;
-      if(this.nominees.length >= 5) {
+      if (this.nominees.length >= 5) {
         this.nominationService.setNominationFlag(false);
         this.nominationService.triggerBanner();
       }
       else {
         this.nominationService.setNominationFlag(true);
       }
-    })
+    });
   }
 
   ngOnInit(): void {
     this.nominationService.triggerNominees();
   }
 
-  onRemoveNomination(nominee: Movie) {
+  onRemoveNomination(nominee: Movie): void {
     this.nominationService.delNominee(nominee);
   }
 
-  onClearNominations() {
+  onClearNominations(): void {
     this.nominationService.clearNominees();
   }
 }

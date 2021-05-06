@@ -5,7 +5,7 @@ import {
 } from 'rxjs/operators';
 
 import { MovieService } from '../services/movie.service';
-import { Movie } from '../interfaces/movie'
+import { Movie } from '../interfaces/movie';
 import { NominationService } from '../services/nomination.service';
 
 @Component({
@@ -16,7 +16,7 @@ import { NominationService } from '../services/nomination.service';
 export class SearchComponent implements OnInit {
   movies$: Observable<Movie[]> = of([]);
   nominees$: Observable<Movie[]> = of([]);
-  canNominate: boolean = true;
+  canNominate = true;
   private queryTerms = new Subject<string>();
 
   constructor(private movieService: MovieService, private nominationService: NominationService) { }

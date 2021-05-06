@@ -11,8 +11,8 @@ import { environment } from 'src/environments/environment';
 })
 export class MovieService {
 
-  private omdbBaseUrl = `http://www.omdbapi.com/`;
-  private apiKey = environment.OMDB_API_KEY;
+  private omdbBaseUrl = `https://www.omdbapi.com/`;
+  private apiKey = '1b4d75d6';
 
   constructor(private http: HttpClient) { }
 

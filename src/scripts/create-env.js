@@ -7,7 +7,7 @@ dotenv.config()
 fs.writeFileSync('./src/environments/environment.prod.ts',`\
 export const environment = {
     production: true,
-    OMDB_API_KEY: ${OMDB_API_KEY}
+    OMDB_API_KEY: ${process.env.OMDB_API_KEY}
 };
 `)
 

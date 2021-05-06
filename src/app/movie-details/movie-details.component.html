@@ -1,0 +1,5 @@
+<div *ngIf="movie">
+    <div class="float-left"><b>{{movie.title}}</b> ({{movie.releaseYear}})</div>
+    <button class="nomationButton btn btn-primary float-right" (click)="onNominate(movie)" [disabled]="!canNominate">Nominate</button>
+</div>
+

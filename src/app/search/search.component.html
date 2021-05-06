@@ -1,0 +1,17 @@
+<div id="search-component">
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon1">Search</span>
+        </div>
+        <input type="text" #searchBox id="search-box" class="form-control" (input)="search(searchBox.value)" placeholder="Movie" aria-label="Movie to search for" aria-describedby="basic-addon1"/>
+      </div>
+
+    <ul class="list-group">
+        <li class="list-group-item" *ngFor="let listedMovie of movies$ | async" >
+            <app-movie-details [movie]="listedMovie"></app-movie-details>
+        </li>
+    </ul>
+
+    <div *ngIf="!(movies$ | async)?.length">No movies found. Start searching to select your nominees!</div>
+
+</div>

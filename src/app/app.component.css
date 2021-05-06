@@ -1,0 +1,73 @@
+.spacer {
+    width:150px;
+  }
+
+  .toolbar {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #002e25;
+    color: white;
+    font-weight: 600;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20pt;
+    overflow: hidden;
+  }
+
+  .toolbar img {
+    margin: 0 16px;
+  }
+
+div.title{
+      margin: auto;
+  }
+
+div.search{
+    margin-top:80px;
+}
+
+div.site-box{
+    display: grid;
+    height:95%
+}
+
+div.content{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    min-width: 100px;
+    max-width: 100%;
+    margin-top: 10px;
+}
+
+div.search-and-nominations{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  min-width: 100px;
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+.nominees {
+  float: right;
+}
+
+@media all and (max-width: 2160px) and (min-width: 720px) {
+    div.site-box{
+        grid-template-columns: minmax(0, 20%) minmax(0%, 60%) minmax(0, 20%);
+    }
+
+  }
+
+  @media all and (max-width: 720px) and (min-width: 0px) {
+    div.site-box{
+        grid-template-columns: minmax(0, 5%) minmax(0%, 90%) minmax(0, 5%);
+    }
+    p{
+        font-size: 3vw;
+    }
+  }

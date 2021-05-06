@@ -1,0 +1,10 @@
+<h4>Nominations</h4>
+<ul>
+    <li class="list-group-item" *ngFor="let nominee of nominees" >
+        <p><b>{{nominee.title}}</b> ({{nominee.releaseYear}})</p>
+        <button class="btn btn-warning" (click)="onRemoveNomination(nominee)">Remove Nomination</button>
+    </li>
+    <li *ngIf="nominees.length > 0" class="list-group-item">
+        <button class="btn btn-danger" (click)="onClearNominations()">Clear Nominations</button>
+    </li>
+</ul>
